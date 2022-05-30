@@ -1,0 +1,39 @@
+@media screen and (max-width: 1000px) {
+    .topnav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 500000;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+    
+    .topnav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    .openbtn {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+    
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    #close_navbar{
+        display: block;
+    }
+}

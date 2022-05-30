@@ -1,0 +1,2 @@
+for neo neo M8N:http://online-live1.services.u-blox.com/GetOnlineData.ashx?token=WnkFscZbQAKTrrHCtVEWmA;gnss=gps;datatype=eph,alm,aux,pos;lat=36.752500;lon=3.041970;alt=0.000000;pacc=999999.000000
+for neo neo 7N: http://online-live1.services.u-blox.com/GetOnlineData.ashx?token=WnkFscZbQAKTrrHCtVEWmA;gnss=gps;datatype=eph,alm,aux,pos;lat=36.752500;lon=3.041970;alt=0.000000;pacc=999999.000000;format=aid

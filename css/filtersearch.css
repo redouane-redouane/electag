@@ -1,0 +1,29 @@
+#trackerSearch {
+    box-sizing: border-box;
+    background-image: url('../img/searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#trackerSearch:focus {
+    outline: 3px solid #222;
+}
+
+.filterSearch{
+    background-image: url('../img/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    width: 90%;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    outline: 3px solid #222;
+}
