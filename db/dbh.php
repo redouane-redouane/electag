@@ -1,6 +1,6 @@
 <?php
 
-//Connect to data base
+//Connect to data base stored in the server
 $servername = "localhost";
 $username = "urdse";
 $password = "electag";
