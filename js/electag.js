@@ -87,14 +87,16 @@ class Tracker {
         if(map.hasLayer(this.marker)){
             map.removeLayer(this.marker)
         }
+
         this.marker.setLatLng([this.current_position.lat, this.current_position.lng])
                    .addTo(map)
                    .bindPopup("Trackername: " + this.trackername + "<br />" 
-			   + "Serial number: " + this.serial_number + "<br />" 
-			   + "Time: " + this.current_position.aquisition + "<br />" 
-			   + "Action: " + this.current_position.action + "<br />" 
-			   + "Zone: " + this.current_position.zone + "<br />"
-               + "Source: " + this.current_position.geotype);
+                            + "Serial number: " + this.serial_number + "<br />" 
+                            + "Time: " + this.current_position.aquisition + "<br />" 
+                            + "Action: " + this.current_position.action + "<br />" 
+                            + "Zone: " + this.current_position.zone + "<br />"
+                            + "Source: " + this.current_position.geotype
+                    );
     }
 
     display_zones(){
@@ -103,31 +105,31 @@ class Tracker {
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.onreadystatechange = function() {
 	        if (this.readyState == 4 && this.status == 200) {
-			if(this.responseText != ""){
-				if(selected_tracker != null && selected_tracker.zones != null){
-				        while(selected_tracker.zones.length > 0){
-				                let zone = selected_tracker.zones.pop();
-				                if(map != null && map.hasLayer(zone)){
-				                        map.removeLayer(zone);
-				                }
-				        }
-				}
+                if(this.responseText != ""){
+                    if(selected_tracker != null && selected_tracker.zones != null){
+                        while(selected_tracker.zones.length > 0){
+                            let zone = selected_tracker.zones.pop();
+                            if(map != null && map.hasLayer(zone)){
+                                map.removeLayer(zone);
+                            }
+                        }
+                    }
 
-                        	const zones = this.responseText.split(",");
-                        	zones.forEach(zone => {
-                            		var zone_info = zone.split("/");
+                    const zones = this.responseText.split(",");
+                    zones.forEach(zone => {
+                        var zone_info = zone.split("/");
 
-                            		var latlngs = [
-                                            [zone_info[5], zone_info[6]],
-                                            [zone_info[7], zone_info[8]],
-                                            [zone_info[9], zone_info[10]],
-                                            [zone_info[11], zone_info[12]]
-                                        ];                     
-                            		selected_tracker.zones.push(new L.polygon(latlngs, {color: 'red'}).bindPopup(zone_info[1]).addTo(map));
-                            		
-                        	});
-                    	}
+                        var latlngs = [
+                            [zone_info[5], zone_info[6]],
+                            [zone_info[7], zone_info[8]],
+                            [zone_info[9], zone_info[10]],
+                            [zone_info[11], zone_info[12]]
+                        ];                     
+                        selected_tracker.zones.push(new L.polygon(latlngs, {color: 'red'}).bindPopup(zone_info[1]).addTo(map));
+                                        
+                    });
                 }
+            }
         }
         xhttp.send("serial_number=" + this.serial_number);
     }
