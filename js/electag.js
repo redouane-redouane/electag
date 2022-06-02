@@ -71,7 +71,7 @@ class Tracker {
         this.sleeping_hours = sleeping_hours;
         this.sleeping_minutes = sleeping_minutes;
         this.activation_delay = activation_delay;
-        this.gsm_active = gsm_active;this.current_position.zone
+        this.gsm_active = gsm_active;
         this.frequency = frequency;
         this.wait = wait;
         this.threshold = threshold;
