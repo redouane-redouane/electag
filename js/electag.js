@@ -90,12 +90,12 @@ class Tracker {
 
         this.marker.setLatLng([this.current_position.lat, this.current_position.lng])
                    .addTo(map)
-                   .bindPopup("Trackername: " + this.trackername + "<br />" 
-                            + "Serial number: " + this.serial_number + "<br />" 
-                            + "Time: " + this.current_position.aquisition + "<br />" 
-                            + "Action: " + this.current_position.action + "<br />" 
-                            + "Zone: " + this.current_position.zone + "<br />"
-                            + "Source: " + this.current_position.geotype
+                   .bindPopup("<b>Trackername: </b>" + this.trackername + "<br />" 
+                            + "<b>Serial number: </b>" + this.serial_number + "<br />" 
+                            + "<b>Time: </b>" + this.current_position.aquisition + "<br />" 
+                            + "<b>Action: </b>" + this.current_position.action + "<br />" 
+                            + "<b>Zone: </b>" + this.current_position.zone + "<br />"
+                            + "<b>Source: </b>" + this.current_position.geotype
                     );
     }
 

@@ -126,12 +126,12 @@ function get_data(){
 																opacity: 1,
 																fillOpacity: 1
 															}).addTo(map)
-															.bindPopup("Trackername: " + selected_tracker.trackername + "<br />"
-																		+ "Serial number: " + selected_tracker.serial_number + "<br />"
-																		+ "Time: " + target[0] + "<br />" 
-																		+ "Action: " + target[2] + "<br />"
-																		+ "Zone: " + target[9] + "<br />"
-																		+ "Source: " + target[7]
+															.bindPopup("<b>Trackername: </b>" + selected_tracker.trackername + "<br />"
+																		+ "<b>Serial number: </b>" + selected_tracker.serial_number + "<br />"
+																		+ "<b>Time: </b>" + target[0] + "<br />" 
+																		+ "<b>Action: </b>" + target[2] + "<br />"
+																		+ "<b>Zone: </b>" + target[9] + "<br />"
+																		+ "<b>Source: </b>" + target[7]
 															);
 											tracker.targets.push(circle_marker);
 											tracker.display_zones();
