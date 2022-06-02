@@ -420,7 +420,7 @@ function get_devices(){
             // delete devices in the table to update the devices list
             let deviceRows = table.childNodes;
             for (let i = deviceRows.length - 1; i > 1 ; i--) {
-                    deviceRows[i].remove();
+                deviceRows[i].remove();
             }
 
             // add each device in a different line in the table

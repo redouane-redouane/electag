@@ -70,7 +70,7 @@ function filterSearchTrackers() {
         txtValue = tr[i].innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
-        } else {
+        } else{
             tr[i].style.display = "none";
         }
     }
@@ -83,11 +83,11 @@ function filterSearchLogs() {
     table = document.getElementById("logs_table");
     tr = table.getElementsByTagName("tr");
 
-    for (i = 1; i < tr.length; i++) {
+    for (i = 1; i < tr.length; i++){
         txtValue = tr[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(filter) > -1){
             tr[i].style.display = "";
-        } else {
+        } else{
             tr[i].style.display = "none";
         }
     }

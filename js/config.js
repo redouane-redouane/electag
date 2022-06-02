@@ -8,13 +8,12 @@ function get_trackers(){
             let table = document.getElementById("trackers_table");
                     
             // delete trackers in the table to update the trackers list
-	    if(table != null){
-
-            let trackerRows = table.childNodes;
-            for (let i = trackerRows.length - 1; i > 1 ; i--) {
-                trackerRows[i].remove();
+            if(table != null){
+                let trackerRows = table.childNodes;
+                for (let i = trackerRows.length - 1; i > 1 ; i--) {
+                    trackerRows[i].remove();
+                }
             }
-	    }
 
             // add each tracker in a different line in the table
             if(this.responseText != ""){
@@ -107,7 +106,6 @@ function get_trackers(){
 function fill_configuration_form(serial_number){
     trackers.forEach(tracker => {
         if(tracker.serial_number == serial_number){
-
             // Dispositif configuration
             document.getElementById("serial_number").innerHTML = tracker.serial_number;
             document.getElementById("apn").innerHTML = tracker.apn;
@@ -326,11 +324,11 @@ function delete_tracker(serial_number){
 	    xhttp.open("POST", "db/delete_device.php", true);
 	    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	    xhttp.onreadystatechange = function() {
-		            if (this.readyState == 4 && this.status == 200) {
-				    load_trackers();
-			            get_trackers();
-			    }
-		        }
+		    if (this.readyState == 4 && this.status == 200) {
+                load_trackers();
+                get_trackers();
+			}
+		}
 	    xhttp.send("serial_number=" + serial_number);
 }
 
@@ -383,7 +381,7 @@ function edit_tracker(){
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-	    load_trackers();
+	        load_trackers();
             get_trackers();
         }
     }
@@ -411,6 +409,7 @@ function insert_config_general(){
     if(timez[0] == '+'){
        timez = '%2B' + timez.slice(1,2);
     }
+
     low_battery = document.getElementById("check_battery_20").checked;
     empty_battery = document.getElementById("check_battery_10").checked;
     battery_threshold = document.getElementById("battery_threshold").value;

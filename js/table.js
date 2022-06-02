@@ -5,7 +5,7 @@ function fill_table(){
     } else {
         let targetRows = table.childNodes;
         for (let i = targetRows.length - 1; i > 1 ; i--) {
-               targetRows[i].remove();
+            targetRows[i].remove();
         }
         const options = {
             method: 'POST',
