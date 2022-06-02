@@ -89,8 +89,8 @@ class Tracker {
         }
 
         this.marker.setLatLng([this.current_position.lat, this.current_position.lng])
-                   .addTo(map)
-                   .bindPopup("<b>Trackername: </b>" + this.trackername + "<br />" 
+                    .addTo(map)
+                    .bindPopup("<b>Trackername: </b>" + this.trackername + "<br />" 
                             + "<b>Serial number: </b>" + this.serial_number + "<br />" 
                             + "<b>Time: </b>" + this.current_position.aquisition + "<br />" 
                             + "<b>Action: </b>" + this.current_position.action + "<br />" 

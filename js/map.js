@@ -67,11 +67,12 @@ function select_tracker(selected_serial_number){
                                                         opacity: 1,
                                                         fillOpacity: 1
                                                     }).addTo(map)
-                                        	    	.bindPopup("trackername: " + tracker.trackername + "<br />"
-						    								+ "serial number: " + tracker.serial_number + "<br />"
-                                                    		+ "time: " + target[0] + "<br />" 
-                                                            + "action: " + target[2] + "<br />" 
-                                                            + "zone: " + target[9]
+                                        	    	.bindPopup("<b>Trackername: </b>" + tracker.trackername + "<br />"
+						    								+ "<b>Serial number: </b>" + tracker.serial_number + "<br />"
+                                                    		+ "<b>Sime: </b>" + target[0] + "<br />" 
+                                                            + "<b>Action: </b>" + target[2] + "<br />" 
+                                                            + "<b>Zone: </b>" + target[9] + "<br />"
+															+ "<b>Source: </b>" + target[7]
                                                     );
                                     tracker.targets.push(circle_marker);
                                 });
