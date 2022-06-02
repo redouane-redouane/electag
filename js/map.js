@@ -72,7 +72,7 @@ function select_tracker(selected_serial_number){
                                                     		+ "<b>Sime: </b>" + target[0] + "<br />" 
                                                             + "<b>Action: </b>" + target[2] + "<br />" 
                                                             + "<b>Zone: </b>" + target[9] + "<br />"
-															+ "<b>Source: </b>" + target[7]
+															+ "<b>Source: </b>" + target[5]
                                                     );
                                     tracker.targets.push(circle_marker);
                                 });
