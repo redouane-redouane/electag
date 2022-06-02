@@ -71,7 +71,7 @@ class Tracker {
         this.sleeping_hours = sleeping_hours;
         this.sleeping_minutes = sleeping_minutes;
         this.activation_delay = activation_delay;
-        this.gsm_active = gsm_active;
+        this.gsm_active = gsm_active;this.current_position.zone
         this.frequency = frequency;
         this.wait = wait;
         this.threshold = threshold;
@@ -89,11 +89,12 @@ class Tracker {
         }
         this.marker.setLatLng([this.current_position.lat, this.current_position.lng])
                    .addTo(map)
-                   .bindPopup("trackername: " + this.trackername + "<br />" 
-			   + "serial number: " + this.serial_number + "<br />" 
-			   + "time: " + this.current_position.aquisition + "<br />" 
-			   + "action: " + this.current_position.action + "<br />" 
-			   + "zone: " + this.current_position.zone);
+                   .bindPopup("Trackername: " + this.trackername + "<br />" 
+			   + "Serial number: " + this.serial_number + "<br />" 
+			   + "Time: " + this.current_position.aquisition + "<br />" 
+			   + "Action: " + this.current_position.action + "<br />" 
+			   + "Zone: " + this.current_position.zone + "<br />"
+               + "Source: " + this.current_position.geotype);
     }
 
     display_zones(){
