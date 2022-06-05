@@ -1,6 +1,6 @@
 <?php
     if(isset($_SESSION['username'])){
-        header("Location: ../opa/index.php#map");
+        header("Location: ../index.php#map");
         exit();
     }
 ?>
