@@ -112,6 +112,9 @@
             </svg>
         </a> 
         ';
+    } else{
+        header("Location: ../index.php");
+        exit();
     }
     ?>
     
