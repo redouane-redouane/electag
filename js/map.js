@@ -136,8 +136,6 @@ function get_data(){
 																		+ "<b>Source: </b>" + target[7]
 															);
 											tracker.targets.push(circle_marker);
-											
-											tracker.display_zones();
 
 											table = document.getElementById("targets_table");
 											
@@ -210,6 +208,8 @@ function get_data(){
 								}
                             });
                         });
+						if(selected_tracker != null)
+							selected_tracker.display_zones();
                     })
                     .catch(error => console.log(error));
     }
