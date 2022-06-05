@@ -35,7 +35,7 @@ foreach ($jsonIterator as $key => $val) {
     }
 }
 
-$sql = "SELECT aquisition, reception, action, accuracy, speed, geotype, cbattery, gps, csq, zone, lat, lng FROM targets WHERE tracker = ".$trackerid." ORDER BY aquisition DESC;";
+$sql = "SELECT aquisition, reception, action, accuracy, speed, geotype, cbattery, gps, csq, zone, lat, lng FROM targets WHERE tracker = ".$trackerid." ORDER BY reception DESC;";
 $result = $conn->query($sql);
 
 exit(json_encode($result->fetch_all()));
