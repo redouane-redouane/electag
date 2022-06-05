@@ -113,7 +113,7 @@
         </a> 
         ';
     } else{
-        header("Location: ../index.php");
+        header("Location: ../opa/index.php");
         exit();
     }
     ?>
