@@ -164,8 +164,7 @@ class Tracker {
                                             "<td class='form_table'><label><b>End time: </b></label></td>" +
                                             "<td class='form_table'>" + zone_info[3] + "h</td>" +
                                         "</tr>" +
-                                    "</table>"
-                                    
+                                    "</table>"              
                                 )
                                 .addTo(map)
                         );
