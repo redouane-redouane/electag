@@ -158,11 +158,11 @@ class Tracker {
                                         "</tr>" +
                                         "<tr class='form_table'>" +
                                             "<td class='form_table'><label><b>Start time: </b></label></td>" +
-                                            "<td class='form_table'>" + zone_info[2] + "</td>" +
+                                            "<td class='form_table'>" + zone_info[2] + "h</td>" +
                                         "</tr>" +
                                         "<tr class='form_table'>" +
                                             "<td class='form_table'><label><b>End time: </b></label></td>" +
-                                            "<td class='form_table'>" + zone_info[3] + "</td>" +
+                                            "<td class='form_table'>" + zone_info[3] + "h</td>" +
                                         "</tr>" +
                                     "</table>"
                                     
