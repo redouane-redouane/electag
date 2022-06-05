@@ -135,6 +135,7 @@ function get_data(){
 																		+ "<b>Source: </b>" + target[7]
 															);
 											tracker.targets.push(circle_marker);
+											console.log("display zones");
 											tracker.display_zones();
 
 											table = document.getElementById("targets_table");
