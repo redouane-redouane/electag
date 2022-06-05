@@ -112,9 +112,6 @@
             </svg>
         </a> 
         ';
-    } else{
-        header("Location: ../opa/index.php");
-        exit();
     }
     ?>
     

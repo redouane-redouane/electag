@@ -1,3 +1,9 @@
+<?php
+    if(isset($_SESSION['username'])){
+        header("Location: ../opa/index.php#home");
+        exit();
+    }
+?>
 <button class="form_button" onclick="exportCSV();">Export this table to CSV file</button>
 <table id="targets_table">
     <tr>
