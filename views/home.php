@@ -1,3 +1,9 @@
+<?php
+    if(isset($_SESSION['username'])){
+        header("Location: ../opa/index.php#map");
+        exit();
+    }
+?>
 <form class="login" action="db/login.php" method="post">
     <h3>Welcome</h3>
 
