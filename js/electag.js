@@ -93,27 +93,27 @@ class Tracker {
                    .bindPopup("<table class='form_table'>" + 
                                 "<tr class='form_table'>" +
                                     "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.trackername + "</td>" +
+                                    "<td class='form_table'>" + this.trackername + "</td>" +
                                 "</tr>" +
                                 "<tr class='form_table'>" +
-                                    "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.serial_number + "</td>" +
+                                    "<td class='form_table'><label><b>Serial number: </b></label></td>" +
+                                    "<td class='form_table'>" + this.serial_number + "</td>" +
                                 "</tr>" +
                                 "<tr class='form_table'>" +
-                                    "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.current_position.aquisition + "</td>" +
+                                    "<td class='form_table'><label><b>Time: </b></label></td>" +
+                                    "<td class='form_table'>" + this.current_position.aquisition + "</td>" +
                                 "</tr>" +
                                 "<tr class='form_table'>" +
-                                    "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.current_position.action + "</td>" +
+                                    "<td class='form_table'><label><b>Action: </b></label></td>" +
+                                    "<td class='form_table'>" + this.current_position.action + "</td>" +
                                 "</tr>" +
                                 "<tr class='form_table'>" +
-                                    "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.current_position.zone + "</td>" +
+                                    "<td class='form_table'><label><b>Zone: </b></label></td>" +
+                                    "<td class='form_table'>" + this.current_position.zone + "</td>" +
                                 "</tr>" +
                                 "<tr class='form_table'>" +
-                                    "<td class='form_table'><label><b>Trackername: </b></label></td>" +
-                                    "<td class='form_table'><input class='form_input'>" + this.current_position.geotype + "</td>" +
+                                    "<td class='form_table'><label><b>Source: </b></label></td>" +
+                                    "<td class='form_table'>" + this.current_position.geotype + "</td>" +
                                 "</tr>" +
                             "</table>");
                    /* .bindPopup("<b>Trackername: </b>" + this.trackername + "<br />" 
