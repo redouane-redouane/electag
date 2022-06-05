@@ -67,12 +67,32 @@ function select_tracker(selected_serial_number){
                                                         opacity: 1,
                                                         fillOpacity: 1
                                                     }).addTo(map)
-                                        	    	.bindPopup("<b>Trackername: </b>" + tracker.trackername + "<br />"
-						    								+ "<b>Serial number: </b>" + tracker.serial_number + "<br />"
-                                                    		+ "<b>Sime: </b>" + target[0] + "<br />" 
-                                                            + "<b>Action: </b>" + target[2] + "<br />" 
-                                                            + "<b>Zone: </b>" + target[9] + "<br />"
-															+ "<b>Source: </b>" + target[5]
+                                        	    	.bindPopup("<table class='form_table'>" + 
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Trackername: </b></label></td>" +
+																		"<td class='form_table'>" + tracker.trackername + "</td>" +
+																	"</tr>" +
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Serial number: </b></label></td>" +
+																		"<td class='form_table'>" + tracker.serial_number + "</td>" +
+																	"</tr>" +
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Time: </b></label></td>" +
+																		"<td class='form_table'>" + target[0] + "</td>" +
+																	"</tr>" +
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Action: </b></label></td>" +
+																		"<td class='form_table'>" + target[2] + "</td>" +
+																	"</tr>" +
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Zone: </b></label></td>" +
+																		"<td class='form_table'>" + target[9] + "</td>" +
+																	"</tr>" +
+																	"<tr class='form_table'>" +
+																		"<td class='form_table'><label><b>Source: </b></label></td>" +
+																		"<td class='form_table'>" + target[5] + "</td>" +
+																	"</tr>" +
+																"</table>"
                                                     );
                                     tracker.targets.push(circle_marker);
                                 });
@@ -128,12 +148,32 @@ function get_data(){
 																opacity: 1,
 																fillOpacity: 1
 															}).addTo(map)
-															.bindPopup("<b>Trackername: </b>" + selected_tracker.trackername + "<br />"
-																		+ "<b>Serial number: </b>" + selected_tracker.serial_number + "<br />"
-																		+ "<b>Time: </b>" + target[0] + "<br />" 
-																		+ "<b>Action: </b>" + target[2] + "<br />"
-																		+ "<b>Zone: </b>" + target[9] + "<br />"
-																		+ "<b>Source: </b>" + target[7]
+															.bindPopup("<table class='form_table'>" + 
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Trackername: </b></label></td>" +
+																			"<td class='form_table'>" + selected_tracker.trackername + "</td>" +
+																		"</tr>" +
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Serial number: </b></label></td>" +
+																			"<td class='form_table'>" + selected_tracker.serial_number + "</td>" +
+																		"</tr>" +
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Time: </b></label></td>" +
+																			"<td class='form_table'>" + target[0] + "</td>" +
+																		"</tr>" +
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Action: </b></label></td>" +
+																			"<td class='form_table'>" + target[2] + "</td>" +
+																		"</tr>" +
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Zone: </b></label></td>" +
+																			"<td class='form_table'>" + target[9] + "</td>" +
+																		"</tr>" +
+																		"<tr class='form_table'>" +
+																			"<td class='form_table'><label><b>Source: </b></label></td>" +
+																			"<td class='form_table'>" + target[7] + "</td>" +
+																		"</tr>" +
+																	"</table>"
 															);
 											tracker.targets.push(circle_marker);
 

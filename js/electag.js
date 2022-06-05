@@ -116,13 +116,6 @@ class Tracker {
                                     "<td class='form_table'>" + this.current_position.geotype + "</td>" +
                                 "</tr>" +
                             "</table>");
-                   /* .bindPopup("<b>Trackername: </b>" + this.trackername + "<br />" 
-                            + "<b>Serial number: </b>" + this.serial_number + "<br />" 
-                            + "<b>Time: </b>" + this.current_position.aquisition + "<br />" 
-                            + "<b>Action: </b>" + this.current_position.action + "<br />" 
-                            + "<b>Zone: </b>" + this.current_position.zone + "<br />"
-                            + "<b>Source: <b>" + this.current_position.geotype
-                    ); */
     }
 
     display_zones(){
@@ -151,7 +144,13 @@ class Tracker {
                             [zone_info[9], zone_info[10]],
                             [zone_info[11], zone_info[12]]
                         ];                     
-                        selected_tracker.zones.push(new L.polygon(latlngs, {color: 'red'}).bindPopup(zone_info[1]).addTo(map));
+                        selected_tracker.zones.push(
+                            new L.polygon(latlngs, {color: 'red'})
+                                .bindPopup(
+                                    zone_info[1]
+                                )
+                                .addTo(map)
+                        );
                                         
                     });
                 }
