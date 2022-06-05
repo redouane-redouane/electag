@@ -63,8 +63,7 @@ if($zone != "null"){
         	."'$aquisition', '$action', $accuracy, $speed, '$geotype', $cbattery, '$gps', $csq, $zone, $lat, $lon, $entry, $exit)";
 }
 if ($conn->query($sql) == FALSE){
-    echo $sql;
-    echo "could not insert this target into database";
+    echo "Insert error";
 } else {
     $sql = "SELECT * FROM pending_cfg WHERE serial_number =".$serial_number." ORDER BY cfgid ASC";
     $result = $conn->query($sql);
@@ -114,7 +113,7 @@ if ($conn->query($sql) == FALSE){
         }
     }
     else{
-	echo "target inserted and there is no pending config";
+	    echo "target inserted and there is no pending config";
     }
 }
 $conn->close();

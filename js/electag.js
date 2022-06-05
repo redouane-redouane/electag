@@ -147,7 +147,25 @@ class Tracker {
                         selected_tracker.zones.push(
                             new L.polygon(latlngs, {color: 'red'})
                                 .bindPopup(
-                                    zone_info[1]
+                                    "<table class='form_table'>" + 
+                                        "<tr class='form_table'>" +
+                                            "<td class='form_table'><label><b>Trackername: </b></label></td>" +
+                                            "<td class='form_table'>" + selected_tracker.trackername + "</td>" +
+                                        "</tr>" +
+                                        "<tr class='form_table'>" +
+                                            "<td class='form_table'><label><b>Zone name: </b></label></td>" +
+                                            "<td class='form_table'>" + zone_info[1] + "</td>" +
+                                        "</tr>" +
+                                        "<tr class='form_table'>" +
+                                            "<td class='form_table'><label><b>Start time: </b></label></td>" +
+                                            "<td class='form_table'>" + zone_info[2] + "</td>" +
+                                        "</tr>" +
+                                        "<tr class='form_table'>" +
+                                            "<td class='form_table'><label><b>End time: </b></label></td>" +
+                                            "<td class='form_table'>" + zone_info[3] + "</td>" +
+                                        "</tr>" +
+                                    "</table>"
+                                    
                                 )
                                 .addTo(map)
                         );
