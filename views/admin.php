@@ -1,9 +1,3 @@
-<?php
-    if(!isset($_SESSION['username'])){
-        header("Location: ../index.php#home");
-        exit();
-    }
-?>
 <button class="tablink" onclick="openTab('Users', this);get_users();">Users</button>
 <button class="tablink" onclick="openTab('Groups', this);get_groups();">Groups</button>
 <button class="tablink" onclick="openTab('Folders', this);get_folders();">Folders</button>

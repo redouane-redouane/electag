@@ -1,9 +1,3 @@
-<?php
-    if(!isset($_SESSION['username'])){
-        header("Location: ../index.php#home");
-        exit();
-    }
-?>
 <input type="text" class="filterSearch" id="trackerList" onkeyup="filterSearch('trackerList','trackers_table','tr')" placeholder="Search tracker...">
 <table id="trackers_table">
     <tr>
