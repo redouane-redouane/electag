@@ -60,10 +60,10 @@
                     </svg>
                 </button>
                 <div id="trackers_menu" class="dropdown-content">
-		    <input type="text" placeholder="Search.." id="trackerSearch" onkeyup="filterSearch(\'trackerSearch\',\'trackerDropdown\',\'a\');">
-	            <script>
-			load_trackers();
-		    </script>
+		            <input type="text" placeholder="Search.." id="trackerSearch" onkeyup="filterSearch(\'trackerSearch\',\'trackerDropdown\',\'a\');">
+	                <script>
+			            load_trackers();
+		            </script>
                 </div>
             </div>
             <div class="dropdown navlink-right">
