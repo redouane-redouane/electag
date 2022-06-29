@@ -115,7 +115,6 @@
         <tbody id="admin_folders_table">
             <tr>
                 <th>Folder name</th>
-                <th>Owner</th>
                 <th>Edit folder</th>
                 <th>Delete folder</th>
             </tr>
