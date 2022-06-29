@@ -135,6 +135,7 @@ function get_groups(){
             if(this.responseText != ""){
                 const groups = this.responseText.split(",");
                 groups.forEach(group => {
+                    console.log(group);
                     row = document.createElement("tr");
                     row.className = "groupRow";
 
