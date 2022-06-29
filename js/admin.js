@@ -101,6 +101,7 @@ function insert_user(firstname, lastname, email, username, group, password, pass
         }
         else{
             console.log("user not added");
+            console.log(this.responseText);
         }
     }
     xhttp.send("firstname=" + firstname + "&lastname=" + lastname + "&email=" + email + "&username=" + username + "&group=" + group + "&password=" + password + "&password_confirm=" + password_confirm);
