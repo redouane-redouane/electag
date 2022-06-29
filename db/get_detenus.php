@@ -17,6 +17,8 @@ if ($result->num_rows > 0) {
             <td>'.$row['address'].'</td>
             <td>'.$row['duration'].'</td>
             <td>Not associated</td>
+            <td><button>edit this vehicle</button></td>
+            <td><button>delete this vehicle</button></td>
         </tr>
         ';
     }

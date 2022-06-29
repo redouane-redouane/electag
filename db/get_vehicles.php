@@ -16,7 +16,8 @@ if ($result->num_rows > 0) {
             <td>'.ucfirst($row['name']).'</td>
             <td>'.strtoupper($row['plate']).'</td>
             <td>'.ucfirst($row['color']).'</td>
-            <td>Not associated</td>
+            <td><button>edit this vehicle</button></td>
+            <td><button>delete this vehicle</button></td>
         </tr>
         ';
     }
