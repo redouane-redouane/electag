@@ -135,22 +135,17 @@ function get_groups(){
             if(this.responseText != ""){
                 const groups = this.responseText.split(",");
                 groups.forEach(group => {
-                    group_info = group.split("/");
                     row = document.createElement("tr");
                     row.className = "groupRow";
 
                     column = document.createElement("td");
-                    column.innerHTML = group_info[0];
-                    row.appendChild(column);
-    
-                    column = document.createElement("td");
-                    column.innerHTML = group_info[1];
+                    column.innerHTML = group;
                     row.appendChild(column);
 
                     column = document.createElement("td");
                     group_edit_button = document.createElement("button");
                     group_edit_button.innerHTML = "edit this group";
-                    group_edit_button.setAttribute("value", group_info[0]);
+                    group_edit_button.setAttribute("value", group);
                     group_edit_button.onclick = function(event){
                         fill_edit_group_form(event.target.value);
                     }
@@ -160,7 +155,7 @@ function get_groups(){
                     column = document.createElement("td");
                     group_delete_button = document.createElement("button");
                     group_delete_button.innerHTML = "delete this group";
-                    group_delete_button.setAttribute("value", group_info[0]);
+                    group_delete_button.setAttribute("value", group);
                     group_delete_button.onclick = function(event){
                         delete_group(event.target.value);
                     }
@@ -188,7 +183,7 @@ function get_groups(){
     xhttp.send();
 }
 
-function insert_group(groupname, parentgroup){
+function insert_group(groupname){
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "db/insert_group.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -197,7 +192,7 @@ function insert_group(groupname, parentgroup){
             get_groups();
         }
     }
-    xhttp.send("groupname=" + groupname + "&parentgroup=" + parentgroup);
+    xhttp.send("groupname=" + groupname);
 }
 
 function delete_group(groupname){
@@ -232,21 +227,16 @@ function get_folders(){
             if(this.responseText != ""){
                 const folders = this.responseText.split(",");
                 folders.forEach(folder => {
-                    folder_info = folder.split("/");
                     row = document.createElement("tr");
     
                     column = document.createElement("td");
-                    column.innerHTML = folder_info[0];
-                    row.appendChild(column);
-    
-                    column = document.createElement("td");
-                    column.innerHTML = folder_info[1];
+                    column.innerHTML = folder;
                     row.appendChild(column);
 
                     column = document.createElement("td");
                     folder_edit_button = document.createElement("button");
                     folder_edit_button.innerHTML = "edit this folder";
-                    folder_edit_button.setAttribute('value', folder_info[0]);
+                    folder_edit_button.setAttribute('value', folder);
                     folder_edit_button.onclick = function(event){
                         fill_edit_folder_form(event.target.value);
                     }
@@ -256,7 +246,7 @@ function get_folders(){
                     column = document.createElement("td");
                     folder_delete_button = document.createElement("button");
                     folder_delete_button.innerHTML = "delete this folder";
-                    folder_delete_button.setAttribute('value', folder_info[0]);
+                    folder_delete_button.setAttribute('value', folder);
                     folder_delete_button.onclick = function(event){
                         delete_folder(event.target.value);
                         get_folders();
@@ -284,7 +274,7 @@ function get_folders(){
     xhttp.send();
 }
 
-function insert_folder(foldername, parentfolder){
+function insert_folder(foldername){
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "db/insert_folder.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -293,11 +283,7 @@ function insert_folder(foldername, parentfolder){
             get_folders();
         }
     }
-    console.log("foldername=" + foldername + "&parentfolder=" + parentfolder);
-    if(parentfolder != "")
-        xhttp.send("foldername=" + foldername + "&parentfolder=" + parentfolder);
-    else
-        xhttp.send("foldername=" + foldername);
+    xhttp.send("foldername=" + foldername);
 }
 
 function fill_user_folders(userid){

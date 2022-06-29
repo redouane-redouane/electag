@@ -3,12 +3,7 @@ require "dbh.php";
 session_start();
 // Takes raw data from the request
 $foldername = $_POST["foldername"];
-$parentfolder = $_POST["parentfolder"];
-if($parentfolder == ""){
-    $sql = "INSERT INTO folders (foldername, parentfolder) VALUES ('".$foldername."',null)";
-}else{
-    $sql = "INSERT INTO folders (foldername, parentfolder) VALUES ('".$foldername."','".$parentfolder."')";
-}
+$sql = "INSERT INTO folders (foldername) VALUES ('".$foldername."')";
 
 if ($conn->query($sql) == FALSE){
     echo $sql;

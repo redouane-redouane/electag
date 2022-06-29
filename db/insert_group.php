@@ -3,12 +3,7 @@ require "dbh.php";
 session_start();
 // Takes raw data from the request
 $groupname = $_POST["groupname"];
-$parentgroup = $_POST["parentgroup"];
-if($parentgroup == ""){
-    $sql = "INSERT INTO groups (groupname, parentgroup) VALUES ('".$groupname."',null)";
-}else{
-    $sql = "INSERT INTO groups (groupname, parentgroup) VALUES ('".$groupname."','".$parentgroup."')";
-}
+$sql = "INSERT INTO groups (groupname) VALUES ('".$groupname."')";
 
 if ($conn->query($sql) == FALSE){
     echo $sql;

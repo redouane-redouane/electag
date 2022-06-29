@@ -9,8 +9,7 @@ $response = "";
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $response = $response.$row['groupname']."/"
-                    .$row['parentgroup'].",";       
+        $response = $response.$row['groupname'].",";       
     }
     $response = substr_replace($response ,"", -1);
 }

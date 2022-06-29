@@ -83,7 +83,6 @@
         <tbody id="admin_groups_table">
             <tr>
                 <th>Group name</th>
-                <th>Parent group</th>
                 <th>Edit group</th>
                 <th>Delete group</th>
             </tr>
@@ -100,18 +99,10 @@
                     <tr class="form_table">
                         <td class="form_table"><label>Group name:</label></td>    
                         <td class="form_table"><input class="form_input" id="groupname"></td>
-                    </tr>    
-                    <tr class="form_table">
-                        <td class="form_table"><label>Parent group:</label></td>    
-                        <td class="form_table"><input class="form_input" id="parentgroup"></td>
-                    </tr>    
-                    <tr class="form_table">
-                        <td class="form_table"><label>Role:</label></td>    
-                        <td class="form_table"><input class="form_input" id="phone_num"></td>
-                    </tr>    
+                    </tr>
                 </table>
                 
-                <button class="form_button" onclick="insert_group(document.getElementById('groupname').value, document.getElementById('parentgroup').value);">Confirm</button>
+                <button class="form_button" onclick="insert_group(document.getElementById('groupname').value);">Confirm</button>
             </div>
         </div>
     </div>
@@ -148,7 +139,7 @@
                     </tr>
                 </table>
                 
-                <button class="form_button" onclick="insert_folder(document.getElementById('foldername').value, document.getElementById('parentfolder').value)">Confirm</button>
+                <button class="form_button" onclick="insert_folder(document.getElementById('foldername').value)">Confirm</button>
             </div>
         </div>
     </div>
