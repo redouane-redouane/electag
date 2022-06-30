@@ -1,6 +1,6 @@
 <?php
 if(!isset($_SESSION['username'])){
-    header("Location: http://105.96.109.54:8888/opa/index.php#home");
+    header("Location: ../index.php");
     exit();
 }
 ?>
