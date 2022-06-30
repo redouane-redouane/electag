@@ -1,5 +1,7 @@
 <?php
-header("Location: http://105.96.109.54:8888/opa");
-exit();
+if(isset($_SESSION['username'])){
+    header("Location: #home");
+    exit();
+}
 ?>
 <div id="map"></div>
