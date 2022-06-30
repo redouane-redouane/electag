@@ -19,7 +19,9 @@ function loadmap(){
 		get_data();
 		window.setInterval(get_data, 10000);
 	} else{
+		console.log("redirect");
 		window.location = "http://105.96.109.54:8888/opa/index.php#home";
+
 	}
 }
 
