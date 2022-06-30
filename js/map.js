@@ -1,22 +1,24 @@
 function loadmap(){
-    map = L.map('map').setView([35.204449, -0.630484], 10);
+	if(document.getElementById("map") != null){
+		map = L.map('map').setView([35.204449, -0.630484], 10);
 
-    L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1
-    }).addTo(map);
-    
-    if(selected_tracker != null){
-		selected_tracker.targets.forEach(target => {
-			target.addTo(map);
-		})
-    }
+		L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+			tileSize: 512,
+			zoomOffset: -1
+		}).addTo(map);
+		
+		if(selected_tracker != null){
+			selected_tracker.targets.forEach(target => {
+				target.addTo(map);
+			})
+		}
 
-    get_data();
-    window.setInterval(get_data, 10000);
+		get_data();
+		window.setInterval(get_data, 10000);
+	}
 }
 
 function select_tracker(selected_serial_number){
